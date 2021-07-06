@@ -1,1 +1,34 @@
-/*Styles here*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+/* Title / "logo" */
+
+.keeper {
+  font-weight: 200;
+  display: inline-block;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem; 
+  background-color: rgb(199, 198, 198);
+  margin-bottom: 2rem;
+}
