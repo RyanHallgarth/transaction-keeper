@@ -14,6 +14,16 @@ const initialState = {
             name: 'paycheck',
             amount: 1600.00,
             id: 2
+        },
+        {
+            name: 'this',
+            amount: 234,
+            id: 3
+        },
+        {
+            name: 'that',
+            amount: -321,
+            id: 4
         }
 
     ]
