@@ -5,16 +5,16 @@ const IncomeExpense = () => {
 
     const { transactions } = useContext(GlobalContext);
 
-    const amountArray = transactions.map(transaction => (transaction.amount));
+    const amountArray = transactions.map((transaction) => transaction.amount);
 
     const income = amountArray
-    .filter(num => num > 0 )
-    .reduce((acc, num) => (acc += num))
+    .filter((num) => num > 0 )
+    .reduce((acc, num) => (acc += num), 0)
     .toFixed(2);
 
     const expense = amountArray
-    .filter(num => num < 0 )
-    .reduce((acc, num) => (acc += num))
+    .filter((num) => num < 0 )
+    .reduce((acc, num) => (acc += num), 0)
     .toFixed(2);
   
 

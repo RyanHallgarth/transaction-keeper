@@ -45,7 +45,16 @@ body {
   justify-content: space-between;
   padding: 0.5rem; 
   background-color: rgb(233, 231, 231);
-  margin-bottom: 2rem;
+
+}
+
+.container {
+  margin: 2rem 3rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
 }
 
 .inc-exp-container {
@@ -54,7 +63,7 @@ body {
 
 .list li {
   display: flex;
-  width: 25%;
+  width: 100%;
   justify-content: space-between;
   border: 1px solid #333;
   padding: 0.6rem;

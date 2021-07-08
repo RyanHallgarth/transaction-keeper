@@ -6,11 +6,15 @@ import AddTransaction from '../AddTransaction';
 
 const Home = () => {
     return (
-        <div>
-            <Balance />
-            <IncomeExpense />
+        <div className="container">
+            <div className="top">
+                <Balance />
+
+                <IncomeExpense />
+            </div>
+                <AddTransaction />
             <TransactionList />
-            <AddTransaction />
+            
         </div>
     )
 }
