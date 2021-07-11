@@ -1,26 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-        <nav className="navbar">
-            <h1>
-                <i className="fas fa-search-dollar"/>
-                Transaction<div className="keeper">Keeper</div>
-            </h1>
+  return (
+    <nav className='navbar'>
+      <h1>
+        <i className='fas fa-search-dollar' />
+        <div className='keeper'>Transaction</div>Keeper
+      </h1>
 
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
+      <ul>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/about'>About</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-            </ul>
-            
-        </nav>
-    )
-}
-
-export default Navbar
+export default Navbar;

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* Basic Reset */
 * {
@@ -11,11 +12,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #d6f7e8;
+  background-color: mintcream;
 }
 
 h3 {
-  border-bottom: 1px solid rgb(26, 197, 112);
+  border-bottom: 1px solid rgb(190, 190, 190);
   margin: 2rem 0;
   text-transform: uppercase;
   color: rgb(95, 95, 95);
@@ -33,13 +34,13 @@ h3 {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #111;
+  color: #fff;
 }
 
 /* Title / "logo" */
 
 .keeper {
-  font-weight: 200;
+  font-weight: 400;
   display: inline-block;
 }
 
@@ -49,7 +50,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  background-color: rgb(233, 231, 231);
+  background-color: rgb(92, 179, 135);
+  color: #fff;
+  font-weight: 200;
 }
 
 .container {
@@ -67,8 +70,9 @@ h3 {
 
 .inc-exp-container {
   display: flex;
-  border-radius: 50px;
-  box-shadow: 4px 2px 20px #abe2c9, -4px -2px 20px mintcream;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+    rgba(54, 54, 54, 0.3) 0px 1px 2px -1px;
   padding: 2rem;
 }
 
@@ -77,13 +81,13 @@ h3 {
 }
 
 .inc-exp-container .income {
-  border-right: 1px solid rgb(26, 197, 112);
+  border-right: 1px solid rgb(202, 200, 200);
 }
 
 .balance {
-  border-radius: 50px;
-  background: #d6f7e8;
-  box-shadow: 4px 2px 20px #abe2c9, -4px -2px 20px mintcream;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+    rgba(54, 54, 54, 0.3) 0px 1px 2px -1px;
   padding: 2rem;
 }
 
@@ -92,26 +96,40 @@ h3 {
   width: 100%;
   justify-content: space-between;
   border-radius: 5px;
-  border: 1px solid rgb(39, 85, 71);
   padding: 0.6rem;
   margin: 1rem 0;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+    rgba(54, 54, 54, 0.3) 0px 1px 2px -1px;
 }
 
 .form-control {
   display: flex;
   justify-content: left;
-}
-
-.form-control input[type="text"] {
-  margin-right: 10%;
+  flex-direction: column;
 }
 
 label {
   margin-right: 0.6rem;
 }
 
+input {
+  padding: 0.4rem;
+  border: 1px solid rgb(207, 206, 206);
+  max-width: 50%;
+}
+
+input:first-of-type {
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none !important;
+  border: 2px solid rgb(69, 141, 119);
+}
+
 .add-btn {
-  width: 75%;
+  width: 50%;
   display: block;
   margin-top: 1rem;
   padding: 0.6rem;

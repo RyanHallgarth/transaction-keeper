@@ -28,7 +28,7 @@ const AddTransaction = () => {
 
       <form onSubmit={onSubmit}>
         <div className='form-control'>
-          <label htmlFor='name'>Transaction Name</label>
+          <label htmlFor='name'>Transaction Name:</label>
           <input
             type='text'
             value={name}
@@ -36,7 +36,7 @@ const AddTransaction = () => {
             placeholder='Transaction Name'
           />
 
-          <label htmlFor='amount'>Transaction Amount</label>
+          <label htmlFor='amount'>Transaction Amount:</label>
           <input
             type='number'
             value={amount}
