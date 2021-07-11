@@ -1,20 +1,19 @@
-import React, { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 const Balance = () => {
+  const { transactions } = useContext(GlobalContext);
 
-    const { transactions } = useContext(GlobalContext);
+  const amountArray = transactions.map((transaction) => transaction.amount);
 
-    const amountArray = transactions.map(transaction => (transaction.amount));
+  const balance = amountArray.reduce((acc, num) => (acc += num), 0).toFixed(2);
 
-    const balance = amountArray.reduce((acc, num) => (acc += num), 0).toFixed(2);
+  return (
+    <div className='balance'>
+      <h2>Your Balance</h2>
+      <h1>{balance}</h1>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <h2>Your Balance</h2>
-            <h1>{balance}</h1>
-        </div>
-    )
-}
-
-export default Balance
+export default Balance;

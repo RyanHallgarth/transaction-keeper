@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* Basic Reset */
 * {
@@ -12,6 +11,14 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
+  background-color: #d6f7e8;
+}
+
+h3 {
+  border-bottom: 1px solid rgb(26, 197, 112);
+  margin: 2rem 0;
+  text-transform: uppercase;
+  color: rgb(95, 95, 95);
 }
 
 .navbar ul {
@@ -29,8 +36,6 @@ body {
   color: #111;
 }
 
-
-
 /* Title / "logo" */
 
 .keeper {
@@ -43,9 +48,8 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem; 
+  padding: 0.5rem;
   background-color: rgb(233, 231, 231);
-
 }
 
 .container {
@@ -54,18 +58,71 @@ body {
 
 .top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.top .balance {
+  margin-right: 10%;
 }
 
 .inc-exp-container {
   display: flex;
+  border-radius: 50px;
+  box-shadow: 4px 2px 20px #abe2c9, -4px -2px 20px mintcream;
+  padding: 2rem;
+}
+
+.inc-exp-container > div {
+  padding: 0 1.5rem;
+}
+
+.inc-exp-container .income {
+  border-right: 1px solid rgb(26, 197, 112);
+}
+
+.balance {
+  border-radius: 50px;
+  background: #d6f7e8;
+  box-shadow: 4px 2px 20px #abe2c9, -4px -2px 20px mintcream;
+  padding: 2rem;
 }
 
 .list li {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  border: 1px solid #333;
+  border-radius: 5px;
+  border: 1px solid rgb(39, 85, 71);
   padding: 0.6rem;
   margin: 1rem 0;
+}
+
+.form-control {
+  display: flex;
+  justify-content: left;
+}
+
+.form-control input[type="text"] {
+  margin-right: 10%;
+}
+
+label {
+  margin-right: 0.6rem;
+}
+
+.add-btn {
+  width: 75%;
+  display: block;
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border: none;
+  color: #fff;
+  background-color: rgb(92, 179, 135);
+  border-radius: 5px;
+}
+
+.add-btn:hover {
+  color: rgb(92, 179, 135);
+  background-color: mintcream;
+  border: 1px solid rgb(92, 179, 135);
 }

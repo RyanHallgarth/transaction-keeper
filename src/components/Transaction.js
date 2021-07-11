@@ -1,15 +1,12 @@
-import React from 'react'
-
+import React from "react";
 
 const Transaction = ({ transaction }) => {
+  return (
+    <li>
+      <p>{transaction.name}</p>
+      <p>{transaction.amount}</p>
+    </li>
+  );
+};
 
-
-    return (
-        <li>
-            {transaction.name}
-            {transaction.amount}
-        </li>
-    )
-}
-
-export default Transaction
+export default Transaction;
