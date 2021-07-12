@@ -9,7 +9,11 @@ const Balance = () => {
   const balance = amountArray.reduce((acc, num) => (acc += num), 0).toFixed(2);
 
   return (
-    <div className='balance'>
+    <div
+      className={
+        balance < 0 ? "neg-balance" : balance > 0 ? "pos-balance" : "balance"
+      }
+    >
       <h2>Your Balance</h2>
       <h1>${balance}</h1>
     </div>

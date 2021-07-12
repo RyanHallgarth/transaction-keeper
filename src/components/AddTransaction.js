@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalState";
 
 const AddTransaction = () => {
   const [name, setName] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
 
   const { addTransaction } = useContext(GlobalContext);
 
@@ -17,7 +17,7 @@ const AddTransaction = () => {
     };
 
     setName("");
-    setAmount(0);
+    setAmount("");
 
     addTransaction(newTransaction);
   };
@@ -33,8 +33,11 @@ const AddTransaction = () => {
             type='text'
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder='Transaction Name'
+            placeholder='Concise Name'
+            required
+            maxLength='20'
           />
+          <p>Character limit: {20 - name.length}</p>
 
           <label htmlFor='amount'>Transaction Amount:</label>
           <input

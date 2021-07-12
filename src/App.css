@@ -17,9 +17,15 @@ body {
 
 h3 {
   border-bottom: 1px solid rgb(190, 190, 190);
-  margin: 2rem 0;
+  margin: 1rem 0;
   text-transform: uppercase;
   color: rgb(95, 95, 95);
+}
+
+.form-control p {
+  font-size: 13px;
+  color: rgb(136, 135, 135);
+  margin-bottom: 1rem;
 }
 
 .navbar ul {
@@ -64,7 +70,9 @@ h3 {
   justify-content: center;
 }
 
-.top .balance {
+.top .balance,
+.top .neg-balance,
+.top .pos-balance {
   margin-right: 10%;
 }
 
@@ -84,6 +92,21 @@ h3 {
   border-right: 1px solid rgb(202, 200, 200);
 }
 
+.positive {
+  color: rgb(92, 179, 135);
+}
+
+.negative {
+  color: rgb(201, 5, 5);
+}
+
+.pos-border {
+  border-right: 3px solid rgb(92, 179, 135);
+}
+.neg-border {
+  border-right: 3px solid rgb(201, 5, 5);
+}
+
 .balance {
   background: rgb(255, 255, 255);
   box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
@@ -91,11 +114,30 @@ h3 {
   padding: 2rem;
 }
 
+.neg-balance {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+    rgba(255, 0, 0, 0.3) 0px 3px 2px -1px;
+  padding: 2rem;
+}
+
+.pos-balance {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+    rgba(0, 255, 128, 0.3) 0px 3px 2px -1px;
+  padding: 2rem;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .list li {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
   padding: 0.6rem;
   margin: 1rem 0;
   background: rgb(255, 255, 255);
@@ -119,10 +161,6 @@ input {
   max-width: 50%;
 }
 
-input:first-of-type {
-  margin-bottom: 1rem;
-}
-
 input:focus {
   outline: none !important;
   border: 2px solid rgb(69, 141, 119);
@@ -131,16 +169,113 @@ input:focus {
 .add-btn {
   width: 50%;
   display: block;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   padding: 0.6rem;
   border: none;
   color: #fff;
   background-color: rgb(92, 179, 135);
   border-radius: 5px;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .add-btn:hover {
   color: rgb(92, 179, 135);
   background-color: mintcream;
   border: 1px solid rgb(92, 179, 135);
+  transition: 0.6s;
+}
+
+.delete-btn {
+  padding: 0.9rem;
+  border: none;
+  margin-right: 2px;
+  color: rgb(248, 82, 82);
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 5px 0 0 5px;
+  box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+    rgba(54, 54, 54, 0.3) 0px 1px 2px -1px;
+}
+
+.delete-btn:hover {
+  padding: 0.9rem;
+  border: none;
+  margin-right: 2px;
+  background-color: #fff;
+  color: rgb(248, 82, 82);
+}
+
+@media only screen and (max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar h1 {
+  }
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    margin-top: 0.5rem;
+  }
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .balance {
+    margin: 1rem 0;
+  }
+
+  .top .balance,
+  .top .neg-balance,
+  .top .pos-balance {
+    margin: 1rem 0;
+  }
+
+  .inc-exp-container {
+    display: flex;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+      rgba(54, 54, 54, 0.3) 0px 1px 2px -1px;
+    padding: 1rem;
+  }
+
+  .container {
+    margin: 2rem 1rem;
+  }
+
+  .add-btn {
+    width: 100%;
+    display: block;
+    margin-top: 1.4rem;
+    padding: 0.6rem;
+    border: none;
+    color: #fff;
+    background-color: rgb(92, 179, 135);
+    border-radius: 5px;
+    transition: 0.6s;
+    cursor: pointer;
+  }
+
+  .delete-btn {
+    padding: 0.9 0.5rem;
+    border: none;
+    margin-right: 2px;
+    color: rgb(248, 82, 82);
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+    box-shadow: rgba(84, 84, 95, 0.25) 0px 2px 5px -1px,
+      rgba(54, 54, 54, 0.3) 0px 1px 2px -1px;
+  }
+
+  input {
+    padding: 0.4rem;
+    border: 1px solid rgb(207, 206, 206);
+    max-width: 100%;
+  }
 }
